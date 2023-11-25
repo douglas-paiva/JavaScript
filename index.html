@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/scrollreveal@4"></script>
+    <title>Filmes Populares</title>
+</head>
+<body>
+    <header>
+        <h1>Filmes Populares</h1>
+        <div class="input_field">
+            <input type="text" name="pesquisar" id="pesquisar" placeholder="Digite algum filme para pesquisar">
+            <button id="searchBtn"  class="btn-pesquisar">
+                <img src="assets/search-icon.svg">
+            </button>            
+        </div>
+        <div class="checkbox_field">
+            <input type="checkbox" name="favoritos" id="mostrarFavoritos">
+            <label for="mostrarFavoritos">Mostrar meus filmes favoritos apenas</label>
+        </div>
+    </header>
+    <main class="container">
+        <section id="movieList">            
+        </section>
+    </main>
+
+    <script type="module" src="js/app.js"></script>s
+    <script>
+        ScrollReveal().reveal("main", { delay: 450,  duration: 800, distance: '50px'})
+    </script>
+</body>
+</html>
