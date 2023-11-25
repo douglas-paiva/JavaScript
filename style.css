@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --background-clr: #17162E;
+    --item-clr: #1D1C3B;
+    --white-clr: #FFFFFF;
+    --accent-clr: #706EA8;
+    --grey-clr: #ACACAC;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background-clr);
+    padding-bottom: 5%;
+}
+
+h1 {
+    font: 600 36px 'Kumbh Sans';
+    color: var(--white-clr);
+    text-align: center;
+}
+
+.container {
+    margin-inline: auto;
+    width: min(90%, 90rem);
+}
+
+header {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.input_field {
+    position: relative;
+    width: 50%;
+}
+
+#pesquisar {
+    background: #ffffff34;
+    padding: 20px 82px 20px 24px;
+    border: none;
+    outline: transparent;
+    border-radius: 8px;
+    font: 500 18px 'Kumbh Sans';
+    color: var(--white-clr);
+    width: 100%;
+    transition: background .3s;
+}
+
+#pesquisar::placeholder {
+    color: #8A8A8A;
+}
+
+#pesquisar:focus {
+    outline: 2px solid #ffffff83;
+    background: #ffffff3f;
+}
+
+#pesquisar:hover {
+    background: #ffffff3f;
+}
+
+.btn-pesquisar {
+    position: absolute;
+    right: 20px;
+    top: 9px;
+    padding: 10px 12px;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.btn-pesquisar:hover {
+    background-color: #ffffff15;
+}
+
+.checkbox_field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#mostrarFavoritos {
+    accent-color: var(--accent-clr);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.checkbox_field label {
+    font: 600 18px 'Kumbh Sans';
+    color: var(--white-clr);
+    cursor: pointer;
+}
+
+section {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.movie_item {
+    background-color: var(--item-clr);
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 24px 30px;
+    border-radius: 8px;
+    box-shadow: 
+    0.3335185647010803px 0.24931815266609192px 2.4224610328674316px 0px #00000007,
+    1.4366953372955322px 1.0739859342575073px 4.567187309265137px 0px #0000000C,
+    3.4634618759155273px 2.5890731811523438px 7.6376953125px 0px #00000010,
+    32.838748931884766px 24.548248291015625px 79px 0px #00000026;
+}
+
+.movie_image {
+    flex-shrink: 0;
+    width: 140px;
+    height: 140px;
+    clip-path: circle(50% at 50% 50%);    
+    overflow: hidden;
+}
+
+.movie_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.movie_infoBox {
+    flex-basis: 50%;
+}
+
+.movie_title {
+    font: 500 18px 'Kumbh Sans';
+    line-height: 30px;
+    color: var(--white-clr);
+    margin-bottom: 24px;
+}
+
+.movie_actions {
+    display: flex;
+    gap: 32px;
+}
+
+.movie_actionBox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.movie_actionBox span {
+    font: 400 18px 'Kumbh Sans';
+    color: var(--white-clr);
+}
+
+.btn-favoritar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 18px;
+    border-radius: 40px;
+    background-color: #ffffff13;
+}
+
+.movie_description {
+    flex-basis: 100%;
+}
+
+.movie_description p {
+    font: 400 16px 'Kumbh Sans';
+    line-height: 30px;
+    color: var(--grey-clr);
+}
+
+@media (max-width: 820px) {
+    .movie_item {
+        flex-direction: column;
+    }
+
+    .input_field {
+        width: 90%;
+    }
+}
